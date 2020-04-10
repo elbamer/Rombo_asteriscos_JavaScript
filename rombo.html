@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rombo</title>
+
+    <script type="text/javascript">
+      function rombo() {
+        //Rombo
+        var espacio = "&nbsp";
+        var salto_linea = "<br>";
+        var n = 6;
+
+        for (var i = 1; i <= n; i++) {
+          var a = "";
+          for (var j = 1; j <= n - i; j++) {
+            a += espacio;
+          }
+          for (var j = 1; j <= i; j++) {
+            a += "*";
+          }
+          document.write(a);
+          document.write(salto_linea);
+        }
+
+        for (var i = n; i >= 1; i--) {
+          var a = "";
+          for (var j = 1; j <= n - i; j++) {
+            a += espacio;
+          }
+          for (var j = 1; j <= i; j++) {
+            a += "*";
+         
+          }
+
+          document.write(a);
+
+          document.write(salto_linea);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="demo">Resultado</div>
+    <script>
+     var resu= document.getElementById("demo");
+     resu.innerText = rombo();
+    </script>
+  </body>
+</html>
